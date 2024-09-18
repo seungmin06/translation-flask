@@ -9,6 +9,8 @@ from pyannote.audio import Pipeline
 import os
 
 app = Flask(__name__)
+CORS(app)  # CORS 설정 추가
+
 
 def download_video(url, output_video_path='downloaded_video.mp4'):
     ydl_opts = {
