@@ -55,7 +55,7 @@ def download_audio_and_video_from_youtube(url, output_video_path='static/downloa
         print(f"An error occurred while downloading audio: {e}")
 
 def process_audio(audio_path):
-    model = whisper.load_model("small.en")
+    model = whisper.load_model("tiny.en")
     asr_result = model.transcribe(audio_path)
 
     pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1",
